@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Absence and Persistence</title>
+
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#1c1c1c;
+padding:30px;
+border-radius:10px;
+}
+
+img{
+width:300px;
+border-radius:6px;
+}
+
+input, select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:5px;
+border:none;
+}
+
+button{
+background:#e63946;
+color:white;
+border:none;
+padding:15px;
+font-size:16px;
+cursor:pointer;
+border-radius:6px;
+}
+
+button:hover{
+background:#c81d25;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Absence and Persistence</h1>
+
+<p><b>Connie Roses & Kondracki</b></p>
+
+<img src="cover.jpg">
+
+<h2>$10</h2>
+
+<form id="orderForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="text" placeholder="Address" required>
+
+<input type="text" placeholder="City" required>
+
+<input type="text" placeholder="State / Province">
+
+<input type="text" placeholder="ZIP / Postal Code" required>
+
+<input type="text" placeholder="Country" required>
+
+<select>
+<option value="1">1 Copy</option>
+<option value="2">2 Copies</option>
+<option value="3">3 Copies</option>
+<option value="4">4 Copies</option>
+<option value="5">5 Copies</option>
+</select>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+</div>
+
+<script>
+
+document.getElementById("orderForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("Order recorded! Thank you.");
+
+});
+
+</script>
+
+</body>
+</html>
