@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Absence and Persistence</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
 body{
-font-family: Arial;
-background:#111;
+background:#0f0f0f;
+font-family:Arial;
 color:white;
-text-align:center;
-padding:40px;
+margin:0;
 }
 
 .container{
-max-width:700px;
+max-width:1000px;
 margin:auto;
-background:#1c1c1c;
-padding:30px;
-border-radius:10px;
+padding:40px;
+display:flex;
+flex-wrap:wrap;
+gap:40px;
 }
 
-img{
-width:300px;
-border-radius:6px;
+.cover{
+flex:1;
+min-width:300px;
 }
 
-input, select{
+.cover img{
 width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:5px;
+border-radius:6px;
+box-shadow:0 0 30px rgba(0,0,0,.6);
+}
+
+.info{
+flex:1;
+min-width:300px;
+}
+
+h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.artist{
+color:#bbb;
+margin-bottom:20px;
+}
+
+.price{
+font-size:28px;
+margin:20px 0;
+color:#f4c542;
+}
+
+form input, form select{
+width:100%;
+padding:12px;
+margin:6px 0;
 border:none;
+border-radius:5px;
 }
 
 button{
-background:#e63946;
-color:white;
-border:none;
+width:100%;
 padding:15px;
-font-size:16px;
-cursor:pointer;
+margin-top:10px;
+background:#e63946;
+border:none;
+font-size:18px;
+color:white;
 border-radius:6px;
+cursor:pointer;
 }
 
 button:hover{
 background:#c81d25;
 }
+
+.footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
+<div class="cover">
+<img src="cover.jpg">
+</div>
+
+<div class="info">
+
 <h1>Absence and Persistence</h1>
 
-<p><b>Connie Roses & Kondracki</b></p>
+<div class="artist">
+An album by Connie Roses & Kondracki
+</div>
 
-<img src="cover.jpg">
+<div class="price">$10</div>
 
-<h2>$10</h2>
+<p>
+Physical CD manufactured via Kunaki.
+Ships worldwide.
+</p>
 
 <form id="orderForm">
 
@@ -83,9 +135,19 @@ background:#c81d25;
 <option value="5">5 Copies</option>
 </select>
 
-<button type="submit">Place Order</button>
+<button type="submit">
+Place Order
+</button>
 
 </form>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+Kunaki Product ID: PX00M10N7C
 
 </div>
 
@@ -95,7 +157,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
 e.preventDefault();
 
-alert("Order recorded! Thank you.");
+alert("Order received. Payment instructions will be sent shortly.");
 
 });
 
